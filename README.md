@@ -4,6 +4,17 @@
 
 项目以实验室设备的「台账 → 预约 → 审批 → 实际使用 → 维修保养」为业务线，重点练习关系模型、主外键、视图、存储过程、触发器、事务和统计查询，并提供 GUI 操作及真实的 Excel 文件导入导出。采用适合课程演示的简单架构，运行时不需要 Web 服务器。
 
+## 下载运行
+
+已发布 [v1.0.0](https://github.com/DevStudyLab/mysql-lab-equipment-course-design/releases/tag/v1.0.0)：
+
+| 下载 | 运行要求 |
+| --- | --- |
+| [Windows 64 位便携版 ZIP](https://github.com/DevStudyLab/mysql-lab-equipment-course-design/releases/download/v1.0.0/lab-equipment-demo-windows-x64.zip) | 已包含 Java 17 和 MySQL 5.7；全部解压后双击 `LabEquipment.exe`，须保留完整文件夹 |
+| [独立 JAR](https://github.com/DevStudyLab/mysql-lab-equipment-course-design/releases/download/v1.0.0/lab-equipment-demo.jar) | 需要 Java（推荐 17）及可连接的 MySQL，初始化和启动步骤见下文 |
+
+便携版支持 Windows 10/11 64 位，首次启动会自动创建本机演示数据库，后续保留数据；账号 `admin`，密码 `Demo@123`。正常关闭窗口后会停止自己的数据库。ZIP 内含使用说明和第三方许可证，[SHA256SUMS.txt](https://github.com/DevStudyLab/mysql-lab-equipment-course-design/releases/download/v1.0.0/SHA256SUMS.txt) 可用于核对下载文件完整性。
+
 ![设备台账界面](docs/screenshots/devices-hidpi.png)
 
 ## 课程设计背景
@@ -148,7 +159,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start-local-demo.p
 
 关闭程序后运行 `stop-demo.bat`，再移动或备份目录。该脚本使用仅面向本机演示的固定数据库账号，独立实例 root 为空密码，不能作为正式部署配置。
 
-项目也实现了使用包内 Java/MySQL 的 Windows 便携 EXE 启动入口 `PortableLauncher`。本仓库提供源码；本地便携交付包不随 Git 仓库分发，也不将单个 JAR 描述为免环境程序。
+项目也实现了使用包内 Java/MySQL 的 Windows 便携 EXE 启动入口 `PortableLauncher`。便携 ZIP 和独立 JAR 通过 [GitHub Releases](https://github.com/DevStudyLab/mysql-lab-equipment-course-design/releases) 下载，二进制运行文件不放入 Git 历史。
 
 ## 演示账号
 
