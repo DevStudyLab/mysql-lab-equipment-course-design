@@ -1,0 +1,4 @@
+# Copy to db.properties. Create an empty database first; see README.
+db.url=jdbc:mysql://127.0.0.1:3306/lab_equipment_demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+db.user=lab_demo
+db.password=change_me

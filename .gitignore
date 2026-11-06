@@ -1,0 +1,17 @@
+/target/
+/runtime/
+/db.properties
+/.idea/
+/.vscode/
+*.iml
+*.log
+*.tmp
+*.class
+*.jar
+*.exe
+*.zip
+*.doc
+*.docx
+*.pdf
+Thumbs.db
+.DS_Store
